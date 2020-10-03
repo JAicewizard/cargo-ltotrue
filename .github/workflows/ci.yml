@@ -17,4 +17,4 @@ jobs:
         rust: ["1.46.0"]
     steps:
       - name: Bundle (macos)
-        run: cargo bundle --bin=gui --release
+        run: cargo build --bin=gui --release
