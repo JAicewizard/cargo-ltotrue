@@ -4,6 +4,8 @@ on:
   push:
     branches: [master]
     tags: ["**"]
+  pull_request:
+    branches: [master]
 
 jobs:
   build:
@@ -14,5 +16,8 @@ jobs:
         os: [macOS-latest]
         rust: ["1.46.0"]
     steps:
+      - uses: hecrj/setup-rust-action@v1
+        with:
+          rust-version: ${{ matrix.rust }}
       - name: Bundle (macos)
-        run: cargo build --bin=gui --release
+        run: cargo bundle --bin=gui --release
