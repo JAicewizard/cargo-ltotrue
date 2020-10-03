@@ -20,9 +20,13 @@ jobs:
       - uses: hecrj/setup-rust-action@v1
         with:
           rust-version: ${{ matrix.rust }}
-      - name: downgrade
-        run: |
-          rustup update
-          rustup default beta
-      - name: build
+      - name: "stable"
         run: cargo build --bin=gui --release
+      - name: "beta"
+        run: |
+          rustup default beta
+          cargo build --bin=gui --release
+      - name: "nightly"
+        run: |
+          rustup default nightly
+          cargo build --bin=gui --release
