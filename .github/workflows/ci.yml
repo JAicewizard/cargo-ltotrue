@@ -2,7 +2,7 @@ name: ci
 
 on:
   push:
-    branches: [lto-min]
+    branches: [master]
     tags: ["**"]
 
 jobs:
