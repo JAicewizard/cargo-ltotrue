@@ -9,9 +9,6 @@ description = "demo"
 name = "martens_martens_icons_lib"
 crate_type = ["dylib", "lib"]
 
-[dependencies]
-
 [profile.release]
-debug = true
 lto = true
 

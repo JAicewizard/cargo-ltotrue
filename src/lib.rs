@@ -1,1 +1,1 @@
-pub mod image;
+pub fn load_image() {}
