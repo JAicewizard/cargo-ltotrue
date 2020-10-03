@@ -14,11 +14,15 @@ jobs:
     strategy:
       matrix:
         os: [macOS-latest]
-        rust: ["1.47.0"]
+        rust: ["1.46.0"]
     steps:
       - uses: actions/checkout@v2
       - uses: hecrj/setup-rust-action@v1
         with:
           rust-version: ${{ matrix.rust }}
-      - name: Bundle (macos)
+      - name: downgrade
+        run: |
+          rustup update
+          rustup default beta
+      - name: build
         run: cargo build --bin=gui --release
