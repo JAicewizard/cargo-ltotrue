@@ -7,4 +7,5 @@ pub struct CharBlock {
 
 pub fn load_image(
 ) {
+	println!("AAAEEE")
 }
