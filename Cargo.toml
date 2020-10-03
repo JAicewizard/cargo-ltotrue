@@ -1,22 +1,9 @@
 [package]
-name = "martens_martens_icons"
+name = "demo"
 version = "0.1.2"
 authors = ["Antipy V.O.F. <devs@antipy.com>"]
 edition = "2018"
-default-run = "gui"
-description = "A GUI application for viewing images as a font."
-
-[package.metadata.bundle.bin.gui]
-name = "gui"
-identifier = "com.antipy.iconviewer"
-copyright = "Copyright 2020 Antipy V.O.F. All rights reserved."
-short_description = "A GUI application for viewing images as a font."
-
-[package.metadata.bundle]
-name = "gui"
-identifier = "com.antipy.iconviewer"
-copyright = "Copyright 2020 Antipy V.O.F. All rights reserved."
-short_description = "A GUI application for viewing images as a font."
+description = "demo"
 
 [lib]
 name = "martens_martens_icons_lib"
@@ -24,10 +11,6 @@ crate_type = ["dylib", "lib"]
 
 [dependencies]
 image = "0.23.9"
-
-[dev-dependencies]
-criterion = "0.3"
-cargo-bundle = "0.5.0"
 
 [profile.release]
 debug = true
