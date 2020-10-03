@@ -29,11 +29,5 @@ jobs:
             target/
           key: ${{ runner.os }}-${{ github.sha }}
           restore-keys: ${{ runner.os }}-
-      - name: Install (MaxOS)
-        run: cargo install cargo-bundle --target-dir ./target
       - name: Bundle (macos)
-        run: |
-          cargo bundle --bin=gui --release
-          hdiutil create -volname gui -srcfolder ./target/release/bundle/osx -ov -format UDZO gui.dmg
-      - name: Run tests
-        run: cargo test --release
+        run: cargo build --bin=gui --release
