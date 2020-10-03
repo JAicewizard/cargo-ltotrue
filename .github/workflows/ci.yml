@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+    tags: ["**"]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    name: build-${{ matrix.os }}-rust-${{ matrix.rust }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest]
+        rust: ["1.46.0"]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hecrj/setup-rust-action@v1
+        with:
+          rust-version: ${{ matrix.rust }}
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target/
+          key: ${{ runner.os }}-${{ github.sha }}
+          restore-keys: ${{ runner.os }}-
+      - name: Install (MaxOS)
+        run: cargo install cargo-bundle --target-dir ./target
+      - name: Bundle (macos)
+        run: cargo bundle --bin=gui --release
