@@ -7,16 +7,16 @@ default-run = "gui"
 description = "A GUI application for viewing images as a font."
 
 [package.metadata.bundle.bin.gui]
-name = "gui"
-identifier = "com.antipy.iconviewer"
-copyright = "Copyright 2020 Antipy V.O.F. All rights reserved."
-short_description = "A GUI application for viewing images as a font."
+name = "demo"
+identifier = "com.antipy.demo"
+copyright = "demo."
+short_description = "demo"
 
 [package.metadata.bundle]
-name = "gui"
-identifier = "com.antipy.iconviewer"
-copyright = "Copyright 2020 Antipy V.O.F. All rights reserved."
-short_description = "A GUI application for viewing images as a font."
+name = "demo"
+identifier = "com.antipy.demo"
+copyright = "demo."
+short_description = "demo"
 
 [dependencies]
 image = "0.23.9"
