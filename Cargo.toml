@@ -9,14 +9,12 @@ description = "A GUI application for viewing images as a font."
 [package.metadata.bundle.bin.gui]
 name = "gui"
 identifier = "com.antipy.iconviewer"
-icon = ["assets/icon*.png"]
 copyright = "Copyright 2020 Antipy V.O.F. All rights reserved."
 short_description = "A GUI application for viewing images as a font."
 
 [package.metadata.bundle]
 name = "gui"
 identifier = "com.antipy.iconviewer"
-icon = ["assets/icon*.png"]
 copyright = "Copyright 2020 Antipy V.O.F. All rights reserved."
 short_description = "A GUI application for viewing images as a font."
 
@@ -34,3 +32,4 @@ cargo-bundle = "0.5.0"
 [profile.release]
 debug = true
 lto = true
+

@@ -1,3 +1,6 @@
+// Copyright 2020 Antipy V.O.F. All rights reserved.
+extern crate martens_martens_icons_lib;
+
 use image;
 
 fn main() {
