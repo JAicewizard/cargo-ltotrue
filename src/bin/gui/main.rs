@@ -1,2 +1,2 @@
-extern crate martens_martens_icons_lib;
+extern crate demo_lib;
 fn main() {}
