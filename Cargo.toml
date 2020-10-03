@@ -1,0 +1,14 @@
+[package]
+name = "demo"
+version = "0.1.2"
+authors = ["Antipy V.O.F. <devs@antipy.com>"]
+edition = "2018"
+default-run = "gui"
+description = "demo"
+
+[dependencies]
+image = "0.23.9"
+
+[profile.release]
+debug = true
+lto = true
