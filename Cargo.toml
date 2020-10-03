@@ -6,6 +6,11 @@ edition = "2018"
 default-run = "gui"
 description = "demo"
 
+[package.metadata.bundle.bin.gui]
+name = "demo"
+identifier = "com.antipy.demo"
+short_description = "demo"
+
 [package.metadata.bundle]
 name = "demo"
 identifier = "com.antipy.demo"
